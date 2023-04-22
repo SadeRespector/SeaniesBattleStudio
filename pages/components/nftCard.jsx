@@ -2288,11 +2288,11 @@ import Web3 from "web3";
 import { useState, useEffect } from 'react'
 
 import {ethers} from 'ethers'
-import { contractAddress } from "../../constants/constants";
-import React from "react";
-import { render } from "react-dom";
 
-import { ThirdwebSDK } from "@thirdweb-dev/sdk/evm";
+import React from "react";
+
+
+
 
 
 
@@ -2507,7 +2507,7 @@ export const NFTCard = ({ nft }) => {
             </div>
             <div className="flex justify-center mb-1">
 			<button className="py-1 px-2 bg-blue-500 w-22 text-center rounded-md text-white cursor-pointer hover:bg-[#2546bd] white-glassmorphism" onClick={(e)=>{levelUpWithDickels(nft.tokenId)}}>Level Me up with Dickels!</button>
-            <button className="py-1 px-2 bg-blue-500 w-22 text-center rounded-md text-white cursor-pointer hover:bg-[#2546bd] white-glassmorphism" onClick={(e)=>{levelUpWithDickels(nft.tokenId)}}>Level Me up with Polygon!</button>
+            <button className="py-1 px-2 bg-blue-500 w-22 text-center rounded-md text-white cursor-pointer hover:bg-[#2546bd] white-glassmorphism" onClick={(e)=>{levelUpWithPolygon(nft.tokenId)}}>Level Me up with Polygon!</button>
             {/* <button className="py-1 px-2 bg-blue-500 w-22 text-center rounded-md text-white cursor-pointer hover:bg-[#2546bd] white-glassmorphism" onClick={(e)=>{levelUp(nft.id.tokenId)}}>Level Me up!</button> */}
             </div>
 			<div className="flex justify-center mb-1">
