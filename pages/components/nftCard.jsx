@@ -2340,19 +2340,23 @@ const getLevelFee = async (tokenId) =>{
     await window.ethereum.enable();
           const web3 = new Web3(window.ethereum)
           await window.ethereum.request({ method: "eth_requestAccounts" });
-          const shauniesNFT = new web3.eth.Contract(battlerABI, battlerContract) 
+        const shauniesNFT = new web3.eth.Contract(battlerABI, battlerContract) 
          const LevelFee = await shauniesNFT.methods.getLevelfeeForTokenId(tokenId).call({from: ethereum.selectedAddress})
 		 console.log(LevelFee)
 		 return(LevelFee)
   }
   const levelUpWithPolygon = async (tokenId) =>{
     await window.ethereum.enable();
+
           const web3 = new Web3(window.ethereum)
-		  const LevelFee = await getLevelFee(tokenId)
-		  console.log(LevelFee)
+		  
+		  
+		  
           await window.ethereum.request({ method: "eth_requestAccounts" });
           const shauniesNFT = new web3.eth.Contract(battlerABI, battlerContract) 
-          await shauniesNFT.methods.requestStatsWithPolygon(tokenId).send({from: ethereum.selectedAddress, value: ethers.utils.parseEther(LevelFee + 0.0001)})
+		  const LevelFee = await shauniesNFT.methods.tokenIds(tokenId).call({from: ethereum.selectedAddress})
+			console.log(LevelFee[0]) 
+		   await shauniesNFT.methods.requestStatsWithPolygon(tokenId).send({from: ethereum.selectedAddress, value: ethers.utils.parseEther(LevelFee[0])})
   }
   const levelUpWithDickels = async (tokenId) =>{
     await window.ethereum.enable();
