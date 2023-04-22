@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 <GetEXPBalance />
 </div>
   <div className="absolute inset-x-0 top-0 h-16 text-white flex justify-center mb-1 top-title">Seanies Battle Studio!</div>
- 
+  <div className="inset-x-0 top-0 h-16 text-gray-500 flex justify-center mb-1 ">Approve your Dickels in order to level up!</div>
  
  <div className="min-h-screen gradient-bg-welcome">
 
