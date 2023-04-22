@@ -34,6 +34,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   <div className='text-blue-300 md:text-green-300" flex justify-center'>
     
     <ul className='text-lg '>
+    <li className='flex justify-center'>Why is my transaction failing/ Why am I getting a JSON rpc error?</li>
+    <li className='text-sm flex justify-center '>MetaMask tries to auto calculate gas fees, but isn't great at doing so. Go to advanced settings, turn on "Advanced gas controls
+" and when prompted by metamask select "Advanced" and set Priority fee high enough to match the actual network demand</li>
       <li className='flex justify-center'>What is this?</li>
       <li className='text-sm flex justify-center '>This App is to level your Seanies! Get Stats for PVP and PVE content thats still in the works!</li>
       <li className='flex justify-center'>How Does this work?</li>
